@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Arrays containing different types of characters for password generation
 var lowercaseChars = [
   "a",
   "b",
@@ -96,16 +97,24 @@ var specialChars = [
   "~",
 ];
 
-var randomPasswordArr = [];
+// Initialised empty arrays to store randomly generated characters and password
 var randomCharsArr = [];
+var randomPasswordArr = [];
+
+// While loop counters
 var counter = 0;
 var i = 0;
 
+// Function to generate random password based on the criterias
 function generatePassword() {
+  // Prompts user for password length
   var passwordLength = prompt(
     "Please enter the desired password length. It must be between 8 and 128 characters inclusive."
   );
+  // Validate password length
   if (passwordLength >= 8 && passwordLength <= 128) {
+    // Confirm inclusion of character types
+
     var includeLowercase = confirm(
       "Include lowercase characters? OK for yes, Cancel for no."
     );
@@ -122,6 +131,7 @@ function generatePassword() {
       "Include special characters? OK for yes, Cancel for no."
     );
 
+    // Generate random characters based on user criteria
     while (counter < passwordLength) {
       if (includeLowercase === true) {
         var l = Math.floor(Math.random() * lowercaseChars.length);
@@ -150,6 +160,7 @@ function generatePassword() {
     }
     console.log(randomCharsArr, "<-------");
 
+    // Shuffle the characters to create random password
     while (i < passwordLength) {
       var x = Math.floor(Math.random() * randomCharsArr.length);
       var randomChar = randomCharsArr.splice(x, 1)[0];
@@ -158,12 +169,15 @@ function generatePassword() {
     }
     console.log(randomPasswordArr, "<<<<<<<<");
 
+    // Convert array to string
     var randomGeneratedPassword = randomPasswordArr.join("");
     console.log(randomGeneratedPassword, "**********");
 
+    // Display generated password to user
     alert(`Your random generated password is: ${randomGeneratedPassword}🔑`);
     return randomGeneratedPassword;
   } else {
+    // Display error message for invalid password length
     alert("‼️ Password length must be between 8 and 128 characters.");
   }
 }
