@@ -130,6 +130,9 @@ function writePassword() {
   // random number for speacial characters
   var s = Math.floor(Math.random() * specialChars.length);
 
+  // Random password that is generated
+  var randomCharsArr = [];
+
   // Build the generatePassword function
 
   function generatePassword() {
@@ -137,15 +140,20 @@ function writePassword() {
       // Select random character using each character types random number
       if (includeLowercase === true) {
         var randomLower = lowercaseChars[l];
+        randomCharsArr.push(randomLower);
       }
       if (includeUppercase === true) {
-        var randomUpper = uppercaseCharscaseChars[u];
+        var randomUpper = uppercaseChars[u];
+        randomCharsArr.push(randomUpper);
       }
       if (includeNumeric === true) {
         var randomNumber = numberChars[n];
+        randomCharsArr.push(randomNumber);
       }
       if (includeSpecial === true) {
         var randomSpecial = specialChars[s];
+        randomCharsArr.push(randomSpecial);
+        console.log(randomCharsArr, "********");
       }
     } else {
       alert("‼️ Password length must be between 8 and 128 characters.");
