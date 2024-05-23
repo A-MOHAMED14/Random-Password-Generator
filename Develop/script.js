@@ -120,6 +120,16 @@ function writePassword() {
     "~",
   ];
 
+  // Build the generatePassword function
+
+  function generatePassword() {
+    if (passwordLength >= 8 && passwordLength <= 128) {
+      // generate password
+    } else {
+      alert("‼️ Password length must be between 8 and 128 characters.");
+    }
+  }
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
