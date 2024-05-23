@@ -6,6 +6,23 @@ function writePassword() {
   var passwordLength = prompt(
     "Please enter the desired password length. It must be between 8 and 128 characters inclusive."
   );
+
+  var includeLowercase = confirm(
+    "Include lowercase characters? OK for yes, Cancel for no."
+  );
+
+  var includeUppercase = confirm(
+    "Include uppercase characters? OK for yes, Cancel for no."
+  );
+
+  var includeNumeric = confirm(
+    "Include numeric characters? OK for yes, Cancel for no."
+  );
+
+  var includeSpecialCharacters = confirm(
+    "Include special characters? OK for yes, Cancel for no."
+  );
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
