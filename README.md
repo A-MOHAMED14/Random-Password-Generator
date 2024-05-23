@@ -19,3 +19,13 @@ To visit the live website, <a href="">click here</a>
 - Once all prompts are answered, the application dynamically generates a password that adheres to the selected criteria.
 
 - Lastly, the generated password is displayed in an alert & is written directly to the page, providing a seamless and accessible user experience.
+
+## Website Preview
+
+![website preview snippet](./Assets/screenshots/website-screenshot-2.png)
+
+![website preview snippet](./Assets/screenshots/website-screenshot.png)
+
+## Code Preview
+
+![code preview snippet](./Assets/screenshots/code-screenshot.png)
