@@ -120,11 +120,23 @@ function writePassword() {
     "~",
   ];
 
+  // Generate random numbers between 0 and length of each array:
+  // random number for lowercase characters
+  var l = Math.floor(Math.random() * lowercaseChars.length);
+  // random number for uppercase characters
+  var u = Math.floor(Math.random() * uppercaseChars.length);
+  // random number for number characters
+  var n = Math.floor(Math.random() * numberChars.length);
+  // random number for speacial characters
+  var s = Math.floor(Math.random() * specialChars.length);
+
   // Build the generatePassword function
 
   function generatePassword() {
     if (passwordLength >= 8 && passwordLength <= 128) {
-      // generate password
+      if (includeLowercase === true) {
+        // ...
+      }
     } else {
       alert("‼️ Password length must be between 8 and 128 characters.");
     }
