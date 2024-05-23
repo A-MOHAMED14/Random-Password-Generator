@@ -132,26 +132,27 @@ function generatePassword() {
     );
 
     // Generate random characters based on user criteria
+    // l, u, n and s are all random index numbers for lower, upper, number and special characters
     while (counter < passwordLength) {
-      if (includeLowercase === true) {
+      if (includeLowercase) {
         var l = Math.floor(Math.random() * lowercaseChars.length);
         var randomLower = lowercaseChars[l];
         randomCharsArr.push(randomLower);
         counter++;
       }
-      if (includeUppercase === true) {
+      if (includeUppercase) {
         var u = Math.floor(Math.random() * uppercaseChars.length);
         var randomUpper = uppercaseChars[u];
         randomCharsArr.push(randomUpper);
         counter++;
       }
-      if (includeNumeric === true) {
+      if (includeNumeric) {
         var n = Math.floor(Math.random() * numberChars.length);
         var randomNumber = numberChars[n];
         randomCharsArr.push(randomNumber);
         counter++;
       }
-      if (includeSpecial === true) {
+      if (includeSpecial) {
         var s = Math.floor(Math.random() * specialChars.length);
         var randomSpecial = specialChars[s];
         randomCharsArr.push(randomSpecial);
@@ -163,8 +164,8 @@ function generatePassword() {
     // Shuffle the characters to create random password
     while (i < passwordLength) {
       var x = Math.floor(Math.random() * randomCharsArr.length);
-      var randomChar = randomCharsArr.splice(x, 1)[0];
-      randomPasswordArr.push(randomChar);
+      var randomSelectedChar = randomCharsArr.splice(x, 1)[0];
+      randomPasswordArr.push(randomSelectedChar);
       i++;
     }
     console.log(randomPasswordArr, "<<<<<<<<");
