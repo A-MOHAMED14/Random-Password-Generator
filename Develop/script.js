@@ -20,7 +20,7 @@ function writePassword() {
     "Include numeric characters? OK for yes, Cancel for no."
   );
 
-  var includeSpecialCharacters = confirm(
+  var includeSpecial = confirm(
     "Include special characters? OK for yes, Cancel for no."
   );
 
@@ -134,8 +134,18 @@ function writePassword() {
 
   function generatePassword() {
     if (passwordLength >= 8 && passwordLength <= 128) {
+      // Select random character using each character types random number
       if (includeLowercase === true) {
-        // ...
+        var randomLower = lowercaseChars[l];
+      }
+      if (includeUppercase === true) {
+        var randomUpper = uppercaseCharscaseChars[u];
+      }
+      if (includeNumeric === true) {
+        var randomNumber = numberChars[n];
+      }
+      if (includeSpecial === true) {
+        var randomSpecial = specialChars[s];
       }
     } else {
       alert("‼️ Password length must be between 8 and 128 characters.");
