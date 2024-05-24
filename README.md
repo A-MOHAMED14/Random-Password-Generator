@@ -6,7 +6,7 @@ The goal of this project was to modify starter code to create a browser-based ap
 
 ## Live Demo
 
-To visit the live website, <a href="">click here</a>
+To visit the live website, <a href="https://a-mohamed14.github.io/Random-Password-Generator/">click here</a>
 
 ## Key Features And Accomplishments
 
