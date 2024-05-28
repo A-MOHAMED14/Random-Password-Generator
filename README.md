@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The goal of this project was to modify starter code to create a browser-based application that allows employees to generate random passwords based on specified criteria. The application features dynamically updated HTML and CSS, powered by JavaScript, ensuring a clean, polished, and responsive user interface adaptable to various screen sizes.
+The goal of this project is to modify starter code to create a browser-based application that allows employees to generate random passwords based on specified criteria. The application features dynamically updated HTML and CSS, powered by JavaScript, ensuring a clean, polished, and responsive user interface adaptable to various screen sizes.
 
 ## Live Demo
 
@@ -10,11 +10,11 @@ To visit the live website, <a href="https://a-mohamed14.github.io/Random-Passwor
 
 ## Key Features And Accomplishments
 
-- Included a series of prompts for password criteria selection which is triggered when the button is clicked.
+- Includes a series of prompts for password criteria selection which is triggered when the button is clicked.
 
-- User inputs a password length ranging from 8 to 128 characters when prompted.
+- Allows the user to input a password length ranging from 8 to 128 characters when prompted.
 
-- User can then select from various character types including lowercase, uppercase, numeric, and special characters to tailor the password to specific security requirements.
+- Enables the user to select from various character types including lowercase, uppercase, numeric, and special characters to tailor the password to specific security requirements.
 
 - Once all prompts are answered, the application dynamically generates a password that adheres to the selected criteria.
 
